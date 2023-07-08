@@ -1,1 +1,5 @@
 add_executable(double_lock double_lock.cpp)
+add_executable(hungry hungry.cpp)
+add_executable(hungry2 hungry2.cpp)
+add_executable(other other.cpp)
+add_executable(other2 other2.cpp)

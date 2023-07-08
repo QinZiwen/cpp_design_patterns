@@ -3,12 +3,6 @@
 class GameConfig {
 public:
     static GameConfig* getInstance() {
-        if (m_instance == nullptr) {
-            std::lock_guard<std::mutex> insGuard(m_mutex);
-            if (m_instance == nullptr) {
-                m_instance = new GameConfig;
-            }
-        }
         return m_instance;
     }
 
@@ -31,12 +25,10 @@ private:
     };
 private:
     static GameConfig* m_instance;
-    static std::mutex m_mutex;
     static Garbo m_garbo;
 };
 
-GameConfig* GameConfig::m_instance = nullptr;
-std::mutex GameConfig::m_mutex;
+GameConfig* GameConfig::m_instance = new GameConfig();
 GameConfig::Garbo GameConfig::m_garbo;
 
 int main() {
