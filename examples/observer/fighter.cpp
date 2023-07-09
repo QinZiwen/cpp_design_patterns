@@ -87,6 +87,8 @@ int main() {
 
     player1->setFamilyId(1);
     player3->setFamilyId(1);
+    player2->setFamilyId(2);
+    player4->setFamilyId(2);
 
     Notifier* notifier = new TalkNotifier();
     notifier->addToList(player1);
