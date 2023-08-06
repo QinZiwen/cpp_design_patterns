@@ -1,12 +1,10 @@
 #include "common/common.h"
 
-// 实现接口
 class Implementor {
 public:
     virtual void operationImpl() = 0;
 };
 
-// 具体实现类A
 class ConcreteImplementorA : public Implementor {
 public:
     virtual void operationImpl() override {
@@ -14,7 +12,6 @@ public:
     }
 };
 
-// 具体实现类B
 class ConcreteImplementorB : public Implementor {
 public:
     virtual void operationImpl() override {
@@ -22,7 +19,6 @@ public:
     }
 };
 
-// 抽象类
 class Abstraction {
 public:
     explicit Abstraction(Implementor* impl) : implementor(impl) {}
@@ -33,7 +29,6 @@ protected:
     Implementor* implementor;
 };
 
-// 具体抽象类A
 class ConcreteAbstractionA : public Abstraction {
 public:
     ConcreteAbstractionA(Implementor* impl) : Abstraction(impl) {}
@@ -44,7 +39,6 @@ public:
     }
 };
 
-// 具体抽象类B
 class ConcreteAbstractionB : public Abstraction {
 public:
     ConcreteAbstractionB(Implementor* impl) : Abstraction(impl) {}
