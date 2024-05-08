@@ -110,7 +110,8 @@ int main() {
         }
     }
 
-    pdir1->showName(0);
+    //pdir1->showName(0);
+	pdir3->showName(0);
 
     delete pfile8;
     delete pdir4;
@@ -127,5 +128,6 @@ int main() {
     delete pfile2;
     delete pfile1;
     delete pdir1;
+	std::getchar();
     return 0;
 }
